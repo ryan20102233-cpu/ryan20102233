@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>台灣鐵道攝影點分享</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<h1>台灣鐵道攝影點分享</h1>
+		<div id="routes" class="routes"></div>
+	</header>
+
+	<main>
+		<section class="track-area">
+			<div id="trackContainer" class="track-container">
+				<div id="track" class="track"></div>
+			</div>
+		</section>
+
+		<aside id="infoPanel" class="info-panel hidden">
+			<div class="panel-header">
+				<h2 id="pointTitle">攝影點</h2>
+				<button id="closePanel">關閉</button>
+			</div>
+			<form id="pointForm">
+				<label>名稱<br><input id="inputName" type="text" placeholder="攝影點名稱"></label>
+				<label>說明<br><textarea id="inputDesc" rows="3" placeholder="攝影說明"></textarea></label>
+				<label>照片<br><input id="inputFile" type="file" accept="image/*"></label>
+				<div id="preview" class="preview"></div>
+				<div class="panel-actions">
+					<button id="savePoint" type="button">儲存攝影點</button>
+					<button id="deletePoint" type="button">刪除</button>
+				</div>
+			</form>
+		</aside>
+	</main>
+
+	<footer>
+		<small>點擊直線可新增攝影點（橘色），點擊攝影點可編輯或上傳照片。</small>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+</html>
+

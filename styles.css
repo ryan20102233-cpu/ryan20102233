@@ -1,0 +1,38 @@
+:root{
+  --blue:#2b6fb3;
+  --blue-dark:#1f4f86;
+  --orange:#ff8a00;
+  --bg:#f7f9fc;
+  --panel:#ffffff;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Noto Sans TC',sans-serif;margin:0;background:var(--bg);color:#123}
+header{padding:16px 20px;background:linear-gradient(90deg,#fff, #f0f6ff);display:flex;align-items:center;justify-content:space-between}
+header h1{margin:0;font-size:18px}
+.routes{display:flex;gap:8px}
+.routes button{background:#fff;border:1px solid #d0e4ff;padding:8px 12px;border-radius:6px;color:var(--blue);cursor:pointer}
+.routes button.active{background:var(--blue);color:#fff}
+
+main{display:flex;gap:16px;padding:16px}
+.track-area{flex:1}
+.track-container{height:520px;overflow-y:auto;border-radius:8px;background:linear-gradient(#fff,#f3f8ff);padding:20px;position:relative}
+.track{width:4px;background:var(--blue);margin:0 auto;position:relative;height:1200px;border-radius:2px}
+.station{position:absolute;left:50%;transform:translateX(12px);display:flex;align-items:center;gap:8px}
+.station .dot{width:14px;height:14px;border-radius:50%;background:var(--blue);position:relative;left:-22px}
+.station .label{background:transparent}
+.photo-point{position:absolute;left:50%;transform:translateX(-7px);width:14px;height:14px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 3px rgba(255,138,0,0.12);cursor:pointer}
+
+.info-panel{width:320px;background:var(--panel);border-radius:8px;padding:12px;box-shadow:0 6px 20px rgba(10,20,40,0.08)}
+.info-panel.hidden{display:none}
+.panel-header{display:flex;align-items:center;justify-content:space-between}
+.panel-header h2{margin:0;font-size:16px}
+.info-panel form{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.info-panel input[type="text"],.info-panel textarea{width:100%;padding:8px;border:1px solid #e0e7ef;border-radius:6px}
+.preview img{max-width:100%;border-radius:6px}
+.panel-actions{display:flex;gap:8px}
+.panel-actions button{flex:1;padding:8px;border-radius:6px;border:0;background:var(--blue);color:#fff;cursor:pointer}
+.panel-actions button#deletePoint{background:#eee;color:#333}
+
+footer{padding:12px 20px;color:#556}
+
+@media (max-width:800px){main{flex-direction:column}.info-panel{width:100%}}
