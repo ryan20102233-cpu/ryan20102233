@@ -40,7 +40,7 @@ const closeBtn = document.getElementById('closePanel');
 const pointTitle = document.getElementById('pointTitle');
 
 // TODO: 這裡填入你部署後的 Apps Script 網頁應用程式 URL
-const GAS_URL = '';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbwoWYLH0iJp4NFYyveZpVr4QWwBaywEKo4o8J5xeUEcrj3aJaVBvqTlsyzCm6DdWmAgTg/exec';
 
 let currentRoute = null;
 let currentPointId = null;
